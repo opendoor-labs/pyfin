@@ -21,7 +21,7 @@ DEFAULT_BINOMIAL_TREE_NUM_STEPS = 25
 class Instrument(object):
     @abc.abstractmethod
     def run_model(self):
-        """Calculate a measures (i.e. theoretical value & greeks) for this instrument"""
+        """Calculate measures (i.e. theoretical value & greeks) for this instrument"""
 
 
 class Option(Instrument):
