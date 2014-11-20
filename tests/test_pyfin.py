@@ -62,9 +62,9 @@ class TestPyfin(unittest.TestCase):
         self.assertAlmostEquals(-12.6706,  greek_call_opt.run_model(model=OptionModel.BINOMIAL_TREE)[OptionMeasure.THETA], delta=0.0001)
         self.assertAlmostEquals(-8.3641,   greek_put_opt.run_model(model=OptionModel.BINOMIAL_TREE) [OptionMeasure.THETA], delta=0.0001)
         self.assertAlmostEquals(+6.4561,   greek_call_opt.run_model(model=OptionModel.BINOMIAL_TREE)[OptionMeasure.RHO],   delta=0.0001)
-        self.assertAlmostEquals(-10.8724,  greek_put_opt.run_model(model=OptionModel.BINOMIAL_TREE) [OptionMeasure.RHO],   delta=0.0001)
-        self.assertAlmostEquals(+15.9918,  greek_call_opt.run_model(model=OptionModel.BINOMIAL_TREE)[OptionMeasure.VEGA],  delta=0.0001)
-        self.assertAlmostEquals(+15.1111,  greek_put_opt.run_model(model=OptionModel.BINOMIAL_TREE) [OptionMeasure.VEGA],  delta=0.0001)
+        self.assertAlmostEquals(-10.9031,  greek_put_opt.run_model(model=OptionModel.BINOMIAL_TREE) [OptionMeasure.RHO],   delta=0.0001)
+        self.assertAlmostEquals(+14.1128,  greek_call_opt.run_model(model=OptionModel.BINOMIAL_TREE)[OptionMeasure.VEGA],  delta=0.0001)
+        self.assertAlmostEquals(+13.7077,  greek_put_opt.run_model(model=OptionModel.BINOMIAL_TREE) [OptionMeasure.VEGA],  delta=0.0001)
         self.assertAlmostEquals(+0.0268,   greek_call_opt.run_model(model=OptionModel.BINOMIAL_TREE)[OptionMeasure.GAMMA], delta=0.0001)
         self.assertAlmostEquals(+0.0178,   greek_put_opt.run_model(model=OptionModel.BINOMIAL_TREE) [OptionMeasure.GAMMA], delta=0.0001)
 

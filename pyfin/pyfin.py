@@ -66,7 +66,7 @@ class Option(Instrument):
 
         if model == OptionModel.BLACK_SCHOLES:
             result = self.black_scholes(**kwargs)
-        else:  # model == OptionModel.BINOMIAL_MODEL:
+        else:  # model == OptionModel.BINOMIAL_TREE:
             result = self.binomial_tree(**kwargs)
 
         self.model_cache[model] = result
@@ -155,8 +155,8 @@ class Option(Instrument):
             delta = (value_helper(1, 1, 0) - value_helper(1, 0, 1)) / (self.spot0 * up_fact - self.spot0 * down_fact)
             theta = (value_helper(2, 1, 1) - val) / (2 * dt)
 
-            rho = self.value_sensitivity('riskless_rate', 0.0025, model=OptionModel.BINOMIAL_TREE)
-            vega = self.value_sensitivity('vol', 0.05, model=OptionModel.BINOMIAL_TREE)
+            rho = self.value_sensitivity('riskless_rate', 0.0001, model=OptionModel.BINOMIAL_TREE)
+            vega = self.value_sensitivity('vol', 0.001, model=OptionModel.BINOMIAL_TREE)
 
             delta_up = (value_helper(2, 2, 0) - value_helper(2, 1, 1)) / (self.spot0 * up_fact - self.spot0 * down_fact)
             delta_down = (value_helper(2, 1, 1) - value_helper(2, 0, 2)) / (self.spot0 * up_fact - self.spot0 * down_fact)
