@@ -6,10 +6,6 @@ import math
 import scipy.optimize
 import scipy.stats
 
-# TODO add discrete dividends to binomial tree
-# TODO Monte Carlo path valuation w/ Longstaff-Schwartz for early exercise
-# TODO unit test the run_model() result caching
-
 
 def enum(**enums):
     return type('Enum', (), enums)
