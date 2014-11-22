@@ -15,7 +15,6 @@ pyfin
 Basic options pricing in Python
 
 * Free software: MIT license
-* Documentation: https://pyfin.readthedocs.org.
 
 Features
 --------
