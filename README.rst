@@ -12,7 +12,7 @@ pyfin
         :target: https://pypi.python.org/pypi/pyfin
 
 
-Python finance
+Basic options pricing in Python
 
 * Free software: MIT license
 * Documentation: https://pyfin.readthedocs.org.
@@ -20,4 +20,8 @@ Python finance
 Features
 --------
 
-* TODO
+* Option valuation w/ Black-Scholes, lattice (binomial tree), and Monte Carlo simulation models.
+* Basic Greeks calculation (delta, theta, rho, vega, gamma) across each valuation model.
+* Discrete dividends support in the lattice (binomial tree) and Monte Carlo simulation models.
+* Early exercise (American options) support in Monte Carlo simulation through the Longstaff-Schwartz technique.
+* Minimal dependencies, just Numpy & SciPy.
